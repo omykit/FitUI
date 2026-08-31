@@ -1,0 +1,22 @@
+# FitUI backend
+#
+# This file did not exist before P0. Without it, `backend/.env` — which holds a
+# live Neon DATABASE_URL and the JWT_SECRET — would be committed on the first
+# `git add .`. Keep the .env rules at the top and do not remove them.
+
+# ---- Secrets ----
+.env
+.env.*
+!.env.example
+
+# ---- Dependencies ----
+node_modules/
+
+# ---- Logs ----
+*.log
+npm-debug.*
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+*.swp

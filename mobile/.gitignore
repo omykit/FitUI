@@ -1,0 +1,51 @@
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+expo-start.log
+expo-start.err.log
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files
+# NOTE (P0): the Expo default is only `.env*.local`, which does NOT match a
+# plain `.env`. Added explicitly so mobile/.env stays out of the repo.
+.env
+.env.*
+!.env.example
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+# generated native folders
+/ios
+/android
+
+# local web export artifact (P0: was untracked clutter)
+dist-web-test/

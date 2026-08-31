@@ -1,0 +1,59 @@
+# FitUI — repository-wide ignore rules
+# Defense in depth: package-level .gitignore files exist too, but secrets are
+# matched here at any depth so a new folder is covered automatically.
+
+# ---- Secrets: never commit these ----
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# ---- Dependencies ----
+node_modules/
+**/node_modules/
+
+# ---- Build output ----
+dist/
+build/
+web-build/
+dist-web-test/
+
+# ---- Expo / React Native ----
+.expo/
+**/.expo/
+expo-env.d.ts
+.metro-health-check*
+*.orig.*
+.kotlin/
+
+# Generated native projects (managed workflow regenerates these)
+/mobile/ios/
+/mobile/android/
+
+# ---- Signing material: never commit ----
+*.jks
+*.p8
+*.p12
+*.key
+*.pem
+*.mobileprovision
+
+# ---- Logs & debug ----
+*.log
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+expo-start.log
+expo-start.err.log
+
+# ---- Editor / OS ----
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+*.tsbuildinfo
+
+# ---- Local tooling caches ----
+.cache/
